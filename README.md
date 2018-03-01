@@ -1,0 +1,1 @@
+# vsc-view-in-browser
