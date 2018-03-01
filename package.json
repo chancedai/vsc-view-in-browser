@@ -65,5 +65,6 @@
     },
     "dependencies": {
         "opn": "^5.2.0"
-    }
+    },
+    "homepage": "https://github.com/chancedai/vsc-view-in-browser"
 }
