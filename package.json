@@ -1,0 +1,69 @@
+{
+    "name": "vsc-view-in-browser",
+    "displayName": "vsc view in browser",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "daichang",
+    "engines": {
+        "vscode": "^1.20.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.daichangVscViewInBrowser"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.daichangVscViewInBrowser",
+                "title": "View In Browser"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                "command": "extension.daichangVscViewInBrowser",
+                "group": "navigation"
+                }
+            ],
+            "editor/title": [{
+                    "command": "extension.daichangVscViewInBrowser",
+                    "group": "navigation"
+                }
+            ]
+        },
+        "configuration": {
+            "type": "object",
+            "title": "View In Browser Configuration",
+            "properties": {
+                "daichangViewInBrowser.options": {
+                    "type":"object",
+                    "default":{}
+                },
+                "daichangViewInBrowser.handle": {
+                    "type":"string",
+                    "default": "if( typeof target == 'string'){ if(target.indexOf('/Users/chance/work/sina/')==0){ target = target.replace('/Users/chance/work/sina/','http://dc.sina.com.cn/'); }else{ target = 'file://'+target; options = { app: 'Google Chrome' }; } }"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "opn": "^5.2.0"
+    }
+}
