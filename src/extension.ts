@@ -17,24 +17,17 @@ export function activate(context: vscode.ExtensionContext) {
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
 
-    let disposable = vscode.commands.registerCommand('extension.daichangVscViewInBrowser', (e) => {
-        // The code you place here will be executed every time your command is executed
-
-        let target = '';
+    let disposable = vscode.commands.registerCommand('extension.daichangVscViewInBrowser', (args) => {
+        let target:String = '';
         let config = vscode.workspace.getConfiguration('daichangViewInBrowser');
         let options = config.options;
 
-        // if there is Uri it means the file was selected in the explorer.
-        if (!e || !e.path) {
-            let editor = vscode.window.activeTextEditor;
-            if (!editor) {
-                vscode.window.showWarningMessage('No active text editor found!');
-                return;
-            }
-            target = editor.document.fileName;
-        }else{
-            target = e.path;
+        let editor = vscode.window.activeTextEditor;
+        if (!editor) {
+            vscode.window.showWarningMessage('No active text editor found!');
+            return;
         }
+        target = editor.document.fileName;
         if(target){
             if(config.handle){
                 eval(config.handle);

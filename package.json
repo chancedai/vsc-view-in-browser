@@ -44,7 +44,7 @@
                 },
                 "daichangViewInBrowser.handle": {
                     "type":"string",
-                    "default": "if( typeof target == 'string'){ if(target.indexOf('/Users/chance/work/sina/')==0){ target = target.replace('/Users/chance/work/sina/','http://dc.sina.com.cn/'); }else{ target = 'file://'+target; options = { app: 'Google Chrome' }; } }"
+                    "default": ""
                 }
             }
         }
@@ -66,5 +66,6 @@
     "dependencies": {
         "opn": "^5.2.0"
     },
-    "homepage": "https://github.com/chancedai/vsc-view-in-browser"
+    "homepage": "https://github.com/chancedai/vsc-view-in-browser",
+    "icon": "./icon.png"
 }
