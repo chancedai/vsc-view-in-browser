@@ -2,7 +2,7 @@
     "name": "vsc-view-in-browser",
     "displayName": "vsc view in browser",
     "description": "",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "daichang",
     "engines": {
         "vscode": "^1.20.0"
@@ -26,11 +26,6 @@
                 {
                 "command": "extension.daichangVscViewInBrowser",
                 "group": "navigation"
-                }
-            ],
-            "editor/title": [{
-                    "command": "extension.daichangVscViewInBrowser",
-                    "group": "navigation"
                 }
             ]
         },
