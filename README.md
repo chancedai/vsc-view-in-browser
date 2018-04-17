@@ -21,6 +21,6 @@ example:
     "command": "extension.daichangVscViewInBrowser", "args":"sina.cn"
 }
 ```
-![contextmenu](images/example1.gif)
+![example1](https://raw.githubusercontent.com/chancedai/vsc-view-in-browser/master/images/example1.gif)
 
 **Enjoy!**
