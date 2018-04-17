@@ -21,6 +21,6 @@ example:
     "command": "extension.daichangVscViewInBrowser", "args":"sina.cn"
 }
 ```
-![contextmenu](./images/example1.gif)
+![contextmenu](images/example1.gif)
 
 **Enjoy!**
