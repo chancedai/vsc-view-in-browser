@@ -2,7 +2,7 @@
     "name": "vsc-view-in-browser",
     "displayName": "vsc view in browser",
     "description": "",
-    "version": "0.0.3",
+    "version": "1.0.0",
     "publisher": "daichang",
     "engines": {
         "vscode": "^1.20.0"
